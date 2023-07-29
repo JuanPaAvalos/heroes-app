@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  baseUrl: 'http://pagina/api'
+  baseUrl: 'http://localhost:3000'
+
 };
