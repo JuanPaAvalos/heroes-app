@@ -1,6 +1,10 @@
 <mat-card>
-  <mat-card-header>{{ hero.superhero }}</mat-card-header>
-  <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+  <mat-card-header>
+    <mat-card-title>{{ hero.superhero }}</mat-card-title>
+    <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img [src]="hero | heroImage " alt="">
 
   <mat-card-content>
     <h4>{{ hero.publisher }}</h4>
