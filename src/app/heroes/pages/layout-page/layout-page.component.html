@@ -1,3 +1,31 @@
-<p>layout-page works!</p>
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav opened mode="side" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar color="warn">
+      <span>Heores App</span>
+      <span class="spacer"></span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let item of sideNavItems" [routerLink]="item.url">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        {{item.label}}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
 
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <button mat-button>
+        Salir
+        <mat-icon iconPositionEnd>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

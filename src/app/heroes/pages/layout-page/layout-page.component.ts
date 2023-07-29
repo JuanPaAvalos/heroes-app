@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutPageComponent implements OnInit {
 
+  public sideNavItems = [
+    {label: 'Listado', icon: 'label', url: './list'},
+    {label: 'Agregar', icon: 'add', url: './new-hero'},
+    {label: 'Buscar', icon: 'search', url: './search'},
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
