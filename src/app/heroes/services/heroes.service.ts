@@ -21,4 +21,8 @@ export class HeroService {
         catchError( error => of (undefined)) //* Se utiliza "of (undefined)" para retornar un observable undefined y solo el valor undefined
       );
   }
+
+  getSugestions(query: string): Observable<Hero[]>{
+    return this.httpClient.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`);
+  }
 }
