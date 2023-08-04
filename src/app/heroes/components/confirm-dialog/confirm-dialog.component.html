@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Are you sure you want to delete {{ data.superhero }} ?</h1>
+<div mat-dialog-content>
+  <p>This action can not be undone</p>
+</div>
+<div mat-dialog-actions class="flex justify-content-between">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="warn" (click)="onConfirmClick()">Delete</button>
+</div>
